@@ -14,21 +14,21 @@ public class App {
         System.out.println("El coste del envio es de: "+transporte.costeTotal(54000));
                 int tipoC= transporte.tipoEmbalaje(120f,120f,120f,120f);
                 if(tipoC == 0)
-                    System.out.println(tipoC+"-->"+ITransporte.Pale);
+                    System.out.println("Camión: "+tipoC+"-->"+ITransporte.Pale);
                 else if(tipoC == 1)
-                    System.out.println(tipoC+"-->"+ITransporte.CajaCarton);
+                    System.out.println("Camión: "+tipoC+"-->"+ITransporte.CajaCarton);
                 else
-                    System.out.println(tipoC+"-->"+ITransporte.CajaMadera);
+                    System.out.println("Camión: "+tipoC+"-->"+ITransporte.CajaMadera);
                 //BICICLETA
                 transporte = FactoriaDeTransportes.getProducto(FactoriaDeTransportes.BICICLETA);
         System.out.println("El coste del envio es de: "+transporte.costeTotal(20000));
                int tipoB =transporte.tipoEmbalaje(24f,24f,24f,24f);
                if(tipoB == 0)
-                   System.out.println(tipoB+"-->"+ITransporte.Pale);
+                   System.out.println("Bicicleta:"+tipoB+"-->"+ITransporte.Pale);
                else if(tipoB == 1)
-                   System.out.println(tipoB+"-->"+ITransporte.CajaCarton);
+                   System.out.println("Bicicleta: "+tipoB+"-->"+ITransporte.CajaCarton);
                else
-                   System.out.println(tipoB+"-->"+ITransporte.CajaMadera);
+                   System.out.println("Bicicleta: "+tipoB+"-->"+ITransporte.CajaMadera);
             }
         }
 
