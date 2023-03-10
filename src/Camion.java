@@ -1,4 +1,9 @@
 public class Camion implements ITransporte {
+    /**
+     *Devuelve el coste del envio en camión según el Código Postal.
+     * @param CP Código Postal del lugar del envío.
+     * @return costeB que es el coste del envío.
+     */
 
     public Float costeTotal(Integer CP) {
         Float coste;
@@ -9,7 +14,11 @@ public class Camion implements ITransporte {
         }
         return coste;
     }
-
+    /**
+     *Devuelve el tipo de enbalaje según las características del paquete.
+     * @param x,y,z,peso Características del envío.
+     * @return opcionB que es el número del tipo del embalaje.
+     */
 
     public Integer tipoEmbalaje(Float x, Float y, Float z, Float peso) {
 

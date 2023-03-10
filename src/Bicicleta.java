@@ -2,6 +2,11 @@
 
 
 public class Bicicleta implements ITransporte {
+    /**
+     *Devuelve el coste del envio en bicicleta según el Código Postal.
+     * @param CP Código Postal del lugar del envío.
+     * @return costeB que es el coste del envío.
+     */
 
 
     public Float costeTotal(Integer CP) {
@@ -13,6 +18,11 @@ public class Bicicleta implements ITransporte {
         }
         return costeB;
     }
+    /**
+     *Devuelve el tipo de enbalaje según las características del paquete.
+     * @param x,y,z,peso Características del envío.
+     * @return opcionB que es el número del tipo del embalaje.
+     */
     public Integer tipoEmbalaje(Float x, Float y, Float z, Float peso) {
         Integer opcionB= null;
         ;

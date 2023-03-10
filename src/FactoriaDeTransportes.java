@@ -8,8 +8,8 @@ public class FactoriaDeTransportes {
         public static final int CAMION = 1;
         public static final int BICICLETA = 2;
         /**
-         * Devuelve producto del tipo de la Interface
-         * @param type 1: consola, 2:ventana
+         * Método que devuelve producto del tipo de la Interface
+         * @param type 1: Camión, 2:Bicicleta
          * @return producto segun el tipo
          */
         public static ITransporte getProducto(int type) {
