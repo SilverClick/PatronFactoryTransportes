@@ -8,6 +8,8 @@ public class FactoriaDeTransportes {
         public static final int CAMION = 1;
         public static final int BICICLETA =2;
 
+    public static final int BARCO = 3;
+
 
         /**
          * Método que devuelve producto del tipo de la Interface
@@ -22,7 +24,9 @@ public class FactoriaDeTransportes {
                 // tipo bicicleta
                 case BICICLETA:
                     return new Bicicleta();
-
+                //Tipo barco
+                case BARCO:
+                    return new Barco();
                 // otro tipo
                 default:
                     return null;
