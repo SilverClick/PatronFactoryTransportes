@@ -12,8 +12,8 @@ coste total y tipo de embalaje.
     Float costeTotal(Integer CP);
     Integer tipoEmbalaje(Float x,Float y,Float z,Float peso);
 ```
--Segundo paso: Creamos una clase por cada transporte, bicicleta y
-camión que implementan los métodos de la interfaz y
+-Segundo paso: Creamos una clase por cada transporte, bicicleta,
+camión y barco que implementan los métodos de la interfaz y
 los configura para dependiendo de los valores que reciba devolver
 unos valores o otros.
 Poe ejemplo la bicicleta:
@@ -60,6 +60,7 @@ public class FactoriaDeTransportes {
 
         public static final int CAMION = 1;
         public static final int BICICLETA =2;
+        public static final int BARCO = 3;
  
         
         public static ITransporte getProducto(int type) {
@@ -70,7 +71,9 @@ public class FactoriaDeTransportes {
                 // tipo bicicleta
                 case BICICLETA:
                     return new Bicicleta();
-              
+              //Tipo barco
+                case BARCO:
+                    return new Barco();
                 // otro tipo
                 default:
                     return null;
@@ -104,6 +107,17 @@ y vemos por pantalla todo.
                    System.out.println(tipoB+"-->"+ITransporte.CajaCarton);
                else
                    System.out.println(tipoB+"-->"+ITransporte.CajaMadera);
+                   //Barco
+        transporte = FactoriaDeTransportes.getProducto(FactoriaDeTransportes.BARCO);
+        System.out.println("Barco:"+"El coste del envio es de: "+transporte.costeTotal(18000));
+        int tipoBar= transporte.tipoEmbalaje(220f,220f,220f,220f);
+        if(tipoBar == 0)
+            System.out.println(tipoBar+"-->"+ITransporte.Pale);
+        else if(tipoBar == 1)
+            System.out.println(tipoBar+"-->"+ITransporte.CajaCarton);
+        else
+            System.out.println(tipoBar+"-->"+ITransporte.CajaMadera);
+            
             }
         }
 
