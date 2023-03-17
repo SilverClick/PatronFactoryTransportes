@@ -6,10 +6,12 @@ public class FactoriaDeTransportes {
      */
 
         public static final int CAMION = 1;
-        public static final int BICICLETA = 2;
+        public static final int BICICLETA =2;
+
+
         /**
          * Método que devuelve producto del tipo de la Interface
-         * @param type 1: Camión, 2:Bicicleta
+         * @param type 1: Camión, 2:Bicicleta 3:Barco
          * @return producto segun el tipo
          */
         public static ITransporte getProducto(int type) {
@@ -17,9 +19,10 @@ public class FactoriaDeTransportes {
                 // tipo camion
                 case CAMION:
                     return new Camion();
-                // tipo
+                // tipo bicicleta
                 case BICICLETA:
                     return new Bicicleta();
+
                 // otro tipo
                 default:
                     return null;
