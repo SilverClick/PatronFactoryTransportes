@@ -30,7 +30,16 @@ public class App {
                    System.out.println(tipoB+"-->"+ITransporte.CajaCarton);
                else
                    System.out.println(tipoB+"-->"+ITransporte.CajaMadera);
-
+        //Barco
+        transporte = FactoriaDeTransportes.getProducto(FactoriaDeTransportes.BARCO);
+        System.out.println("Barco:"+"El coste del envio es de: "+transporte.costeTotal(18000));
+        int tipoBar= transporte.tipoEmbalaje(220f,220f,220f,220f);
+        if(tipoBar == 0)
+            System.out.println(tipoBar+"-->"+ITransporte.Pale);
+        else if(tipoBar == 1)
+            System.out.println(tipoBar+"-->"+ITransporte.CajaCarton);
+        else
+            System.out.println(tipoBar+"-->"+ITransporte.CajaMadera);
             }
         }
 
